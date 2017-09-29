@@ -1,0 +1,101 @@
+name: "SSD"
+public_param {
+  detection_param {
+    input_size { dim: 10 dim: 10}
+	share_location: true
+	num_classes: 81
+  }
+}
+layer {
+  name: "data"
+  type: "Input"
+  top: "data"
+  input_param { shape: { dim: 10 dim: 3 dim: 10 dim: 10 } }
+}
+layer {
+  name: "conv1"
+  type: "Convolution"
+  bottom: "data"
+  top: "conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
+  convolution_param {
+    num_output: 100
+    kernel_size: 3
+    stride: 1
+    weight_filler {
+      type: "xavier"
+      std: 0.1
+    }
+    bias_filler {
+      type: "constant"
+      value: 0.2
+    }
+  }
+}
+layer {
+  name: "pool1"
+  type: "Pooling"
+  bottom: "conv1"
+  top: "pool1"
+  pooling_param {
+    pool: MAX
+    kernel_size: 2
+    stride: 2
+  }
+}
+
+layer {
+  name: "ssd1"
+  type: "SSD"
+  bottom: "pool1"
+  top: "ssd_def_box1"
+  top: "ssd_loc_box1"
+  top: "ssd_conf_box1"
+  ssd_param {
+     default_box {
+	    size: 4
+		side_ratios { ratios: 1 ratios: 1}
+		side_ratios { ratios: 1 ratios: 2}
+		side_ratios { ratios: 2 ratios: 1}
+		side_ratios { ratios: 1 ratios: 3}
+		side_ratios { ratios: 3 ratios: 1}
+	 }
+	 default_box{
+	    size: 5.656854249
+		side_ratios { ratios: 1 ratios: 1}
+	 }
+	 variances: 1.0
+     variances: 1.0
+	 variances: 1.0
+	 variances: 1.0
+  }
+
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
+  convolution_param {
+    kernel_size: 3
+    stride: 1
+	pad: 1
+    weight_filler {
+      type: "xavier"
+      std: 0.1
+    }
+    bias_filler {
+      type: "constant"
+      value: 0.2
+    }
+  }
+}

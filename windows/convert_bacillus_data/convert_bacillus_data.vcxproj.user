@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LocalDebuggerCommandArguments>F:\Data\Caffe\Bacillus\OrgData\train\Positive F:\Data\Caffe\Bacillus\OrgData\train\Negative F:\Data\Caffe\Bacillus\ConvetData\train_lmdb</LocalDebuggerCommandArguments>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerEnvironment>path=$(Path);$(OpenCVDir)\x64\vc12\dynamic\bin;$(BoostDir)\x64\vc12\bin;$(GflagsDir)\x64\v12\dynamic\bin;$(GLogDir)\x64\vc12\dynamic\bin;$(Hdf5Dir)\x64\vc12\dynamic\bin;$(LevelDBDir)\x64\vc12\dynamic\bin;$(LmdbDir)\x64\vc12\dynamic\bin;$(OpenBlasDir)\vc12\dynamic\bin;</LocalDebuggerEnvironment>
+  </PropertyGroup>
+</Project>

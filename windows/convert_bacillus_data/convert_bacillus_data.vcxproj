@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{32F3EA70-A6E6-4E1C-B8ED-B1B67DDB9E05}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <RootNamespace>convert_bacillus_data</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="Exists('$(SolutionDir)\CommonSettings.props')">
+    <Import Project="$(SolutionDir)\CommonSettings.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="B:\C\Boost\v1.59.0\x64\vc12\Boost.props" />
+    <Import Project="B:\C\Gflags\v2.1.2.1\x64\v12\dynamic\Gflags.props" />
+    <Import Project="B:\C\Glog\v0.3.3.0\x64\vc12\dynamic\GLog.props" />
+    <Import Project="B:\C\Hdf5\v1.8.15.2\x64\vc12\dynamic\HDF5.props" />
+    <Import Project="B:\C\LevelDB\v1.2.0.0\x64\vc12\static\LevelDB.props" />
+    <Import Project="B:\C\Lmdb\v0.9.14.0\x64\vc12\dynamic\Lmdb.props" />
+    <Import Project="B:\C\OpenBLAS\v0.2.14.1\x64\vc12\dynamic\OpenBlas.props" />
+    <Import Project="B:\C\OpenCV\v3.2.0\ReBulid\x64\vc12\dynamic\OpenCV.props" />
+    <Import Project="B:\C\ProtoBuf\v2.6.1\x64\v12\static\ProtoBuf.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="B:\C\Boost\v1.59.0\x64\vc12\Boost.props" />
+    <Import Project="B:\C\Gflags\v2.1.2.1\x64\v12\dynamic\Gflags.props" />
+    <Import Project="B:\C\Glog\v0.3.3.0\x64\vc12\dynamic\GLog.props" />
+    <Import Project="B:\C\Hdf5\v1.8.15.2\x64\vc12\dynamic\HDF5.props" />
+    <Import Project="B:\C\LevelDB\v1.2.0.0\x64\vc12\static\LevelDB.props" />
+    <Import Project="B:\C\Lmdb\v0.9.14.0\x64\vc12\dynamic\Lmdb.props" />
+    <Import Project="B:\C\OpenBLAS\v0.2.14.1\x64\vc12\dynamic\OpenBlas.props" />
+    <Import Project="B:\C\OpenCV\v3.2.0\ReBulid\x64\vc12\dynamic\OpenCV.props" />
+    <Import Project="B:\C\ProtoBuf\v2.6.1\x64\v12\static\ProtoBuf.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Link>
+      <AdditionalDependencies>libcaffe.lib;$(CudaDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Link>
+      <AdditionalDependencies>libcaffe.lib;$(CudaDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\libcaffe\libcaffe.vcxproj">
+      <Project>{a9acef83-7b63-4574-a554-89ce869ea141}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="convert_bacillus_data.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(SolutionDir)\CommonSettings.targets" />
+</Project>

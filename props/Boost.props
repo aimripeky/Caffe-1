@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <!-- User Macros -->
+  <PropertyGroup Label="UserMacros">
+    <BoostDir>A:\C++\Boost\v1.64.0</BoostDir>
+  </PropertyGroup>
+  <!-- Debug|Win32 -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+  </PropertyGroup>
+  <PropertyGroup>
+    <IncludePath Condition="'$(Platform)'=='Win32'">$(BoostDir);$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Platform)'=='Win32'">$(BoostDir)\x86\vc12\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+	  <AdditionalDependencies>boost_atomic-vc120-mt-gd-1_64.lib;boost_chrono-vc120-mt-gd-1_64.lib;boost_container-vc120-mt-gd-1_64.lib;boost_context-vc120-mt-gd-1_64.lib;boost_coroutine-vc120-mt-gd-1_64.lib;boost_date_time-vc120-mt-gd-1_64.lib;boost_filesystem-vc120-mt-gd-1_64.lib;boost_graph-vc120-mt-gd-1_64.lib;boost_iostreams-vc120-mt-gd-1_64.lib;boost_locale-vc120-mt-gd-1_64.lib;boost_log-vc120-mt-gd-1_64.lib;boost_log_setup-vc120-mt-gd-1_64.lib;boost_math_c99-vc120-mt-gd-1_64.lib;boost_math_c99f-vc120-mt-gd-1_64.lib;boost_math_c99l-vc120-mt-gd-1_64.lib;boost_math_tr1-vc120-mt-gd-1_64.lib;boost_math_tr1f-vc120-mt-gd-1_64.lib;boost_math_tr1l-vc120-mt-gd-1_64.lib;boost_numpy-vc120-mt-gd-1_64.lib;boost_numpy3-vc120-mt-gd-1_64.lib;boost_prg_exec_monitor-vc120-mt-gd-1_64.lib;boost_program_options-vc120-mt-gd-1_64.lib;boost_python-vc120-mt-gd-1_64.lib;boost_python3-vc120-mt-gd-1_64.lib;boost_random-vc120-mt-gd-1_64.lib;boost_regex-vc120-mt-gd-1_64.lib;boost_serialization-vc120-mt-gd-1_64.lib;boost_signals-vc120-mt-gd-1_64.lib;boost_system-vc120-mt-gd-1_64.lib;boost_thread-vc120-mt-gd-1_64.lib;boost_timer-vc120-mt-gd-1_64.lib;boost_type_erasure-vc120-mt-gd-1_64.lib;boost_unit_test_framework-vc120-mt-gd-1_64.lib;boost_wave-vc120-mt-gd-1_64.lib;boost_wserialization-vc120-mt-gd-1_64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <!-- Release|Win32 -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+  </PropertyGroup>
+  <PropertyGroup>
+    <IncludePath Condition="'$(Platform)'=='Win32'">$(BoostDir);$(IncludePath)"</IncludePath>
+    <LibraryPath Condition="'$(Platform)'=='Win32'">$(BoostDir)\x86\vc12\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+	  <AdditionalDependencies>boost_atomic-vc120-mt-1_64.lib;boost_chrono-vc120-mt-1_64.lib;boost_container-vc120-mt-1_64.lib;boost_context-vc120-mt-1_64.lib;boost_coroutine-vc120-mt-1_64.lib;boost_date_time-vc120-mt-1_64.lib;boost_filesystem-vc120-mt-1_64.lib;boost_graph-vc120-mt-1_64.lib;boost_iostreams-vc120-mt-1_64.lib;boost_locale-vc120-mt-1_64.lib;boost_log-vc120-mt-1_64.lib;boost_log_setup-vc120-mt-1_64.lib;boost_math_c99-vc120-mt-1_64.lib;boost_math_c99f-vc120-mt-1_64.lib;boost_math_c99l-vc120-mt-1_64.lib;boost_math_tr1-vc120-mt-1_64.lib;boost_math_tr1f-vc120-mt-1_64.lib;boost_math_tr1l-vc120-mt-1_64.lib;boost_numpy-vc120-mt-1_64.lib;boost_numpy3-vc120-mt-1_64.lib;boost_prg_exec_monitor-vc120-mt-1_64.lib;boost_program_options-vc120-mt-1_64.lib;boost_python-vc120-mt-1_64.lib;boost_python3-vc120-mt-1_64.lib;boost_random-vc120-mt-1_64.lib;boost_regex-vc120-mt-1_64.lib;boost_serialization-vc120-mt-1_64.lib;boost_signals-vc120-mt-1_64.lib;boost_system-vc120-mt-1_64.lib;boost_thread-vc120-mt-1_64.lib;boost_timer-vc120-mt-1_64.lib;boost_type_erasure-vc120-mt-1_64.lib;boost_unit_test_framework-vc120-mt-1_64.lib;boost_wave-vc120-mt-1_64.lib;boost_wserialization-vc120-mt-1_64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <!-- Debug|x64 -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+  </PropertyGroup>
+  <PropertyGroup>
+    <IncludePath Condition="'$(Platform)'=='x64'">$(BoostDir);$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Platform)'=='x64'">$(BoostDir)\x64\vc12\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>boost_atomic-vc120-mt-gd-1_64.lib;boost_chrono-vc120-mt-gd-1_64.lib;boost_container-vc120-mt-gd-1_64.lib;boost_context-vc120-mt-gd-1_64.lib;boost_coroutine-vc120-mt-gd-1_64.lib;boost_date_time-vc120-mt-gd-1_64.lib;boost_filesystem-vc120-mt-gd-1_64.lib;boost_graph-vc120-mt-gd-1_64.lib;boost_iostreams-vc120-mt-gd-1_64.lib;boost_locale-vc120-mt-gd-1_64.lib;boost_log-vc120-mt-gd-1_64.lib;boost_log_setup-vc120-mt-gd-1_64.lib;boost_math_c99-vc120-mt-gd-1_64.lib;boost_math_c99f-vc120-mt-gd-1_64.lib;boost_math_c99l-vc120-mt-gd-1_64.lib;boost_math_tr1-vc120-mt-gd-1_64.lib;boost_math_tr1f-vc120-mt-gd-1_64.lib;boost_math_tr1l-vc120-mt-gd-1_64.lib;boost_numpy-vc120-mt-gd-1_64.lib;boost_numpy3-vc120-mt-gd-1_64.lib;boost_prg_exec_monitor-vc120-mt-gd-1_64.lib;boost_program_options-vc120-mt-gd-1_64.lib;boost_python-vc120-mt-gd-1_64.lib;boost_python3-vc120-mt-gd-1_64.lib;boost_random-vc120-mt-gd-1_64.lib;boost_regex-vc120-mt-gd-1_64.lib;boost_serialization-vc120-mt-gd-1_64.lib;boost_signals-vc120-mt-gd-1_64.lib;boost_system-vc120-mt-gd-1_64.lib;boost_thread-vc120-mt-gd-1_64.lib;boost_timer-vc120-mt-gd-1_64.lib;boost_type_erasure-vc120-mt-gd-1_64.lib;boost_unit_test_framework-vc120-mt-gd-1_64.lib;boost_wave-vc120-mt-gd-1_64.lib;boost_wserialization-vc120-mt-gd-1_64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <!-- Release|x64 -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+  </PropertyGroup>
+  <PropertyGroup>
+    <IncludePath Condition="'$(Platform)'=='x64'">$(BoostDir);$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Platform)'=='x64'">$(BoostDir)\x64\vc12\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <BuildMacro Include="BoostDir">
+      <Value>$(BoostDir)</Value>
+    </BuildMacro>
+  </ItemGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>boost_atomic-vc120-mt-1_64.lib;boost_chrono-vc120-mt-1_64.lib;boost_container-vc120-mt-1_64.lib;boost_context-vc120-mt-1_64.lib;boost_coroutine-vc120-mt-1_64.lib;boost_date_time-vc120-mt-1_64.lib;boost_filesystem-vc120-mt-1_64.lib;boost_graph-vc120-mt-1_64.lib;boost_iostreams-vc120-mt-1_64.lib;boost_locale-vc120-mt-1_64.lib;boost_log-vc120-mt-1_64.lib;boost_log_setup-vc120-mt-1_64.lib;boost_math_c99-vc120-mt-1_64.lib;boost_math_c99f-vc120-mt-1_64.lib;boost_math_c99l-vc120-mt-1_64.lib;boost_math_tr1-vc120-mt-1_64.lib;boost_math_tr1f-vc120-mt-1_64.lib;boost_math_tr1l-vc120-mt-1_64.lib;boost_numpy-vc120-mt-1_64.lib;boost_numpy3-vc120-mt-1_64.lib;boost_prg_exec_monitor-vc120-mt-1_64.lib;boost_program_options-vc120-mt-1_64.lib;boost_python-vc120-mt-1_64.lib;boost_python3-vc120-mt-1_64.lib;boost_random-vc120-mt-1_64.lib;boost_regex-vc120-mt-1_64.lib;boost_serialization-vc120-mt-1_64.lib;boost_signals-vc120-mt-1_64.lib;boost_system-vc120-mt-1_64.lib;boost_thread-vc120-mt-1_64.lib;boost_timer-vc120-mt-1_64.lib;boost_type_erasure-vc120-mt-1_64.lib;boost_unit_test_framework-vc120-mt-1_64.lib;boost_wave-vc120-mt-1_64.lib;boost_wserialization-vc120-mt-1_64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+</Project>
